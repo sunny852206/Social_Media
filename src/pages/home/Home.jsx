@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileSide from "../../components/ProfileSide/ProfileSide";
+import ProfileSide from "../../components/LeftSection/ProfileSide/ProfileSide";
 import "./Home.css";
 const Home = () => {
   return (

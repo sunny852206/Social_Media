@@ -49,7 +49,7 @@ function ProfileModal({ modalOpened, setModalOpened }) {
             type="text"
             className="infoInput"
             name="livesIN"
-            placeholder="LIves in"
+            placeholder="Lives in"
           />
 
           <input
@@ -68,12 +68,11 @@ function ProfileModal({ modalOpened, setModalOpened }) {
           />
         </div>
 
-
         <div>
-            Profile Image 
-            <input type="file" name='profileImg'/>
-            Cover Image
-            <input type="file" name="coverImg" />
+          Profile Image
+          <input type="file" name="profileImg" />
+          Cover Image
+          <input type="file" name="coverImg" />
         </div>
 
         <button className="button infoButton">Update</button>

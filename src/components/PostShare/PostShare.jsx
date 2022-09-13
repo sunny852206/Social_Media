@@ -7,9 +7,9 @@ import { UilLocationPoint } from "@iconscout/react-unicons";
 import { UilSchedule } from "@iconscout/react-unicons";
 import { UilTimes } from "@iconscout/react-unicons";
 
-
 const PostShare = () => {
   const [image, setImage] = useState(null);
+
   const imageRef = useRef();
 
   const onImageChange = (event) => {
@@ -20,14 +20,17 @@ const PostShare = () => {
       });
     }
   };
+
   return (
     <div className="PostShare">
       <img src={ProfileImage} alt="" />
       <div>
         <input type="text" placeholder="What's happening" />
         <div className="postOptions">
-          <div className="option" style={{ color: "var(--photo)" }}
-          onClick={()=>imageRef.current.click()}
+          <div
+            className="option"
+            style={{ color: "var(--photo)" }}
+            onClick={() => imageRef.current.click()}
           >
             <UilScenery />
             Photo
@@ -54,16 +57,12 @@ const PostShare = () => {
             />
           </div>
         </div>
-      {image && (
-
-        <div className="previewImage">
-          <UilTimes onClick={()=>setImage(null)}/>
-          <img src={image.image} alt="" />
-        </div>
-
-      )}
-
-
+        {image && (
+          <div className="previewImage">
+            <UilTimes onClick={() => setImage(null)} />
+            <img src={image.image} alt="" />
+          </div>
+        )}
       </div>
     </div>
   );

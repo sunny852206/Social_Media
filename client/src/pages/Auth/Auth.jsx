@@ -2,9 +2,11 @@ import React from "react";
 import "./Auth.css";
 import Logo from "../../img/logo.png";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(true);
+  const dispatch = useDispatch();
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
@@ -13,20 +15,25 @@ const Auth = () => {
     confirmPassword: "",
   });
   const [confirmPassword, setConfirmPassword] = useState(true);
+
   // single function to handle all input, instead of handling each inpur separately
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
+
+  // Form Submission
   const handleSubmit = (e) => {
     // default behavior to prevent page redirect to other page
     e.preventDefault();
 
     if (isSignUp) {
-      if (data.password !== data.confirmPassword) {
-        setConfirmPassword(false);
-      } else {
-        setConfirmPassword(true);
-      }
+      data.password === data.confirmpass
+        ? // signUp <- action send to redux
+          dispatch(signUp(data, navigate))
+        : setConfirmPass(false);
+    } else {
+      // logIn <- another action if not signed up
+      dispatch(logIn(data, navigate));
     }
   };
 

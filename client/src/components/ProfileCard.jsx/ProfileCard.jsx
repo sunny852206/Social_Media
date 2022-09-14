@@ -42,6 +42,7 @@ const ProfileCard = () => {
         </div>
         <hr />
       </div>
+
       {ProfilePage ? "" : <span>My Profile</span>}
     </div>
   );

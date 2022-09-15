@@ -3,6 +3,7 @@ import "./Auth.css";
 import Logo from "../../img/logo.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { logIn, signUp } from "../../actions/AuthAction";
 
 const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -27,13 +28,13 @@ const Auth = () => {
     e.preventDefault();
 
     if (isSignUp) {
-      data.password === data.confirmpass
+      data.password === data.confirmPassword
         ? // signUp <- action send to redux
-          dispatch(signUp(data, navigate))
-        : setConfirmPass(false);
+          dispatch(signUp(data))
+        : setConfirmPassword(false);
     } else {
       // logIn <- another action if not signed up
-      dispatch(logIn(data, navigate));
+      dispatch(logIn(data));
     }
   };
 

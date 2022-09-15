@@ -6,6 +6,6 @@
 3. Follow / Unfollow people
 4. TimeLine feed (see posts from people the user currently follow)
 
-##
+## Future Features
 1. Notifications
 2. Chat app functionality?

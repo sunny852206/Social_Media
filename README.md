@@ -1,4 +1,5 @@
 # Social Networking Site
+Web app built with MongoDB, Express JS, React JS, and Node JS.
 
 ## Features
 1. Sign up/Log in

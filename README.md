@@ -2,11 +2,11 @@
 Web app built with MongoDB, Express JS, React JS, and Node JS.
 
 ## Features
-1. Sign up/Log in
-2. Create/Update/Delete posts
-3. Follow / Unfollow people
-4. TimeLine feed (see posts from people the user currently follow)
+- Sign up/ Log in
+- Follow / Unfollow people
+- CRUD operations on posts
+- TimeLine feed (only show posts from the following accounts)
 
 ## Future Features
-1. Notifications
-2. Chat app functionality?
+- Notifications
+- Chat app functionality?
